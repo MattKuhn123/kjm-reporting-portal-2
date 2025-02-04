@@ -62,7 +62,7 @@ export default {
     async submit() {
       try {
         this.loading = true
-        await axios.post(`https://ry8kes9z1f.execute-api.us-east-1.amazonaws.com/kjm-reporting-portal-ocr`, {
+        const response = await axios.post(`https://ry8kes9z1f.execute-api.us-east-1.amazonaws.com/kjm-reporting-portal-ocr`, {
           data: this.fileData
         })
 
