@@ -1,5 +1,6 @@
 <script setup>
 import FilePicker from './FilePicker.vue'
+import axios from 'axios';
 defineProps({
   fileTypes: String
 })
@@ -62,13 +63,14 @@ export default {
       try {
         this.loading = true
         await axios.post(`https://ry8kes9z1f.execute-api.us-east-1.amazonaws.com/kjm-reporting-portal-ocr`, {
-          data
+          data: this.fileData
         })
 
         this.text = response.data.responses[0].fullTextAnnotation.text
 
         localStorage.setItem("email", email)
       } catch (err) {
+        console.log(err);
         this.error = err
       } finally {
         this.loading = false
