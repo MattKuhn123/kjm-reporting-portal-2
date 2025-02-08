@@ -68,7 +68,7 @@ export default {
 
         this.text = response.data.responses[0].fullTextAnnotation.text
 
-        localStorage.setItem("email", email)
+        localStorage.setItem("email", email.value)
       } catch (err) {
         console.log(err);
         this.error = err
