@@ -11,9 +11,9 @@ defineProps({
     <fieldset>
       <legend>Personal information</legend>
       <label for="email">Email</label>
-      <input v-model="email" id="email" name="email" type="email" required placeholder="john.doe@yahoo.com"/>
+      <input v-model="email" id="email" name="email" type="email" required placeholder="john.doe@gmail.com"/>
       <label for="confirm-email">Confirm email</label>
-      <input v-model="confirmEmail" id="confirm-email" name="confirm-email" type="email" required placeholder="john.doe@yahoo.com"/>
+      <input v-model="confirmEmail" id="confirm-email" name="confirm-email" type="email" required placeholder="john.doe@gmail.com"/>
     </fieldset>
     <fieldset>
       <legend>Pick file</legend>
